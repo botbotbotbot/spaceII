@@ -1,39 +1,25 @@
 from rendertools import *
-import os
 
-def getNewPixel(oldPixel,neighbors):
-	same = len([x for x in neighbors if x == oldPixel])
-	if same%2==0:
-		return oldPixel
-	else: 
-		r = (oldPixel[0]*same+103)%256
-		b = (oldPixel[1]*same+172)%256
-		g = (oldPixel[2]*same+231)%256
-		return (r,b,g)
+def step(imgfield,n):
+    imgfield_2_file(imgfield,'img/0')
+    for i in range(1,n+1):
+        imgfield = mas(imgfield)
+        imgfield_2_file(imgfield,'img/'+str(i))
+    return
+    
+def mas(imgfield):
+    w = imgfield.width
+    h = imgfield.height
+    newPixels = []
+    for y in range(h):
+        for x in range(w):
+            newPixels.append(imgfield.fingerprintNewPixel(x,y))  # edit this line to change pixel AI
+    I = imgvector_2_imgfield(newPixels,w,h)
+    return I
 
-def step(imgdata,specials,n):
-	newimgdata = mas(imgdata,specials)
-	out = Image.new("RGB",(1000,664))
-	out.putdata(newimgdata)
-	out.save(str(n)+'.png')
-	return newimgdata
+a = file_2_imgfield('charlie.jpg')
 
-def mas(imgdata,specials):
-	n = 0
-	imgdata
-	shuffle(specials)
-	while n < 999 * 663:
-		n += 1
-		if isClose(imgdata[n],specials[0]):
-			imgdata[n],imgdata[(1000+n)%663336] = imgdata[(1000+n)%663336],imgdata[n]
-		elif isClose(imgdata[n],specials[1]):
-			imgdata[n],imgdata[(n-999)%663336] = imgdata[(n-999)%663336],imgdata[n]
-		elif isClose(imgdata[n],specials[2]):
-			imgdata[n],imgdata[(n-999)%663336] = imgdata[(n-999)%663336],imgdata[n]
-	return imgdata
+step(a,500)
 
-a = file_2_imgfield('fb.jpg')
-
-print a.width
-print a.height
-print a.getNeighbors(0,0)
+# Command line instruction to convert output images to video:
+#ffmpeg -framerate 10 -i %d.png -vcodec mpeg4 -y movie.mp4
