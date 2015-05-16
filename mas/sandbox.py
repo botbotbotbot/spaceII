@@ -17,7 +17,7 @@ def mas(imgfield):
     I = imgvector_2_imgfield(newPixels,w,h)
     return I
 
-a = file_2_imgfield('charlie.jpg')
+a = file_2_imgfield('alcohol_zoom.jpg')
 
 step(a,500)
 
