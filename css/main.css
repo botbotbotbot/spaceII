@@ -192,6 +192,62 @@ h2{
 
 
 /* ==========================================================================
+   THE GREEN MACHINE
+   ========================================================================== */
+.GM{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.GM .container{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.GM header{
+    background-color: rgb(14, 155, 108);
+}
+
+.GM header img{
+    width: 80px;
+    padding-right: 15px;
+}
+
+.GM header a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Bangers', cursive;
+    font-size: 1.85em;
+    letter-spacing: .07em;
+}
+
+.GM h1{
+    text-transform: uppercase;
+}
+
+.GM .btn{
+    background-color: rgb(14, 155, 108);
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 2px;
+    padding:8px 19px;
+    color: #fff;
+    font-weight:600;
+    font-size: 1.3em;
+}
+
+
+.center-text{
+    text-align: center;
+}
+
+.italic{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* ==========================================================================
    Helper classes
    ========================================================================== */
 
