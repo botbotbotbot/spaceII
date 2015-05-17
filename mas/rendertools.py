@@ -34,7 +34,7 @@ class imgfield:
         same = len([n for n in neighbors if n == oldPixel])
         if same%2==0:
             return oldPixel
-        else: 
+        else:
             r = (oldPixel[0]*2*same+17)%256
             b = (oldPixel[1]*2*same+11)%256
             g = (oldPixel[2]*2*same+1)%256
@@ -58,7 +58,7 @@ def pixelDistance(a,b):
     b_dist = (a[1]-b[1])**2
     g_dist = (a[2]-b[2])**2
     return sqrt(r_dist+b_dist+g_dist)
-    
+
 def removeEmpties(l):
     noEmpties = []
     for x in l:
@@ -84,7 +84,7 @@ def file_2_imgfield(filename):
     return I
 
 def file_2_imgvector(filename):
-    # Creates an imgvector based on filename. Also returns image width and height. 
+    # Creates an imgvector based on filename. Also returns image width and height.
     img = Image.open(filename)
     width,height = img.size
     data = img.getdata()
@@ -94,14 +94,13 @@ def file_2_imgvector(filename):
     return imgvector,width,height
 
 def imgvector_2_file(imgvector,savename,width,height):
-    # Writes imgvector to savename.png 
+    # Writes imgvector to savename.png
     out = Image.new("RGB",(width,height))
     out.putdata(imgvector)
     out.save(str(savename)+'.png')
     return
-    
-    
-    
-    
-    
-    
+
+
+
+
+

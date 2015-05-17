@@ -6,7 +6,7 @@ def step(imgfield,n):
         imgfield = mas(imgfield)
         imgfield_2_file(imgfield,'img/'+str(i))
     return
-    
+
 def mas(imgfield):
     w = imgfield.width
     h = imgfield.height
