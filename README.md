@@ -24,6 +24,7 @@ Do you think READMEs get sad if nobody reads them?
 
 #TODO: create a translator for cat programming (example: cats walking across keyboards or cats heartlessly murdering woodland creatures).
 ^^ what does this mean?
+^^^^ still wanna know what this means 
 
 #TODO: write output-oriented wrapper for MAS (i.e. dissolve(startFrame,seconds) should return output video and endFrame for next effect to pick up).
 
