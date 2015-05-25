@@ -247,6 +247,61 @@ h2{
     font-style: italic;
 }
 
+
+
+/* ==========================================================================
+   GoT
+   ========================================================================== */
+.got-body{
+    background-color: #391A1A;
+}
+
+.got-container{
+    background-color: #DDE0E3;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.got-container h1{
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: center;
+    font-weight: 400;
+    font-size: 3em;
+    line-height: .3em;
+    padding-top: 65px;
+}
+
+.got-container h3{
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.got-container .panel{
+    width: 65%;
+    margin: 10px auto -65px;
+}
+
+.got-container .panel img{
+    width: 100%;
+}
+
+.got-container .panel p{
+    padding: 20px;
+    background-color: rgba(360,360,360,.4);
+    position: relative;
+    bottom: 156px;
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.panel p::-webkit-scrollbar {
+    display: none;
+}
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
