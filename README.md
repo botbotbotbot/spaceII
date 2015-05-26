@@ -43,4 +43,6 @@ While n<i:
 -- n+=1
 -- For each pixel on the edge of a cluster, if it fits in better to an adjacent cluster, move it over. Fits in better: lower contribution to the cluster's variance (calculate cluster variance with and without pixel and the difference is the pixel contribution). 
 
+#TODO: creatre a history of mars website that goes pretty far into the future based on futurama events and other stuff like that, but the tone is completely serious.
+
 
