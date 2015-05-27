@@ -49,4 +49,4 @@ While n<i:
 
 #TODO: a font showcase based on quotes we like from books we're both reading
 
-#TODO: start using jade instead of html
+#TODO: start using jade instead of html (no closing tags, hehe)
