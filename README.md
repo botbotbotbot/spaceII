@@ -48,3 +48,5 @@ While n<i:
 #TODO: A mobile app that lets you swipe like tinder, but it's to find a couch for the night. think air bnb combined with hotel tonight with some tinder and couch surfing thrown in. esp good if you miss a train in the city, or are traveling cheaply across the contry!
 
 #TODO: a font showcase based on quotes we like from books we're both reading
+
+#TODO: start using jade instead of html
