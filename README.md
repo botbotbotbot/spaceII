@@ -52,3 +52,5 @@ While n<i:
 #TODO: start using jade instead of html (no closing tags, hehe)
 
 #TODO: Make a company that does something super super super conceptual, and make a really convincing website for it, including a national recognition section filled with fake logos
+
+#TODO: A game idea: an elevator that never stops going up. you can choose to stop at floors that keep increasing to let people off an on. you can hear their thoughts, and those change based on who's on the elevator, and what they're doing, or what item they bring on. also all the people are actually cats.
