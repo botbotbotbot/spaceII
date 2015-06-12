@@ -1,5 +1,7 @@
 float eAddSize = 30;
 
+float jStartNum = -350;
+
 int cx = 250;
 int cy = 250;
 int r = 100;
@@ -75,6 +77,21 @@ void i(float x, float y) {
   noStroke();
   fill(random(150,255),random(50, 150),random(50), random(5, 12));
   quad(x + random(5), y + random(2), x + random(5), y + random(30), x + random(50), y + random(50), x + random(100,200), y + random(100, 200));
+}
+
+void j(float x, float y) {
+  if(jStartNum < 200){
+    jStartNum = jStartNum + 5;
+  }
+  else{
+    jStartNum = -350;
+  }
+  for (int i = 0; i < 3; i = i+1) {
+    float randNum = random(10);
+    stroke(random(200,255),random(200,255),random(200,255), random(50));
+    fill(255, 255, 255, random(80));
+    ellipse(x + random(-(jStartNum), jStartNum) ,y + random(-(jStartNum), jStartNum),randNum,randNum);
+  }
 }
 
 
