@@ -5,13 +5,16 @@ int cy = 250;
 int r = 100;
 
 void a(float x, float y) {
-  fill(random(254),random(254),random(254));
+  stroke(random(50), random(50), random(100));
+  fill(random(150),random(75,254),random(75,254));
   rect(x+20,y+20,x-20,y-20);
 }
 
 void b(float x, float y) {
-  fill(random(254),random(254),random(254));
-  ellipse(x,y,30,30);
+  float randomNum = random(300);
+  stroke(random(50), random(50), random(100), random(50));
+  fill(random(100,255),random(150,255),random(100,254), random(100));
+  ellipse(x,y,randomNum,randomNum);
 }
 
 void c(float x, float y) {
