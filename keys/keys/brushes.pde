@@ -81,7 +81,7 @@ void i(float x, float y) {
 
 void j(float x, float y) {
   if(jStartNum < 200){
-    jStartNum = jStartNum + 5;
+    jStartNum = jStartNum + random(5);
   }
   else{
     jStartNum = -350;
