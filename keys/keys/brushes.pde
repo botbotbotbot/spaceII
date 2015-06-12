@@ -1,3 +1,8 @@
+float eAddSize = 30;
+
+int cx = 250;
+int cy = 250;
+int r = 100;
 
 void a(float x, float y) {
   fill(random(254),random(254),random(254));
@@ -23,17 +28,26 @@ void d(float x, float y) {
   triangle(x, y, x - 50, y - random(10), x + random(100), y - 25);
 }
 
-float eAddSize = 30;
 void e(float x, float y){
   noFill();
-  stroke(random(175,254),random(25),random(100,200));
-  if(eAddSize < 800){
+  stroke(random(125,254),random(25),random(100,200));
+  if(eAddSize < 900){
     eAddSize = eAddSize + 5;
   }
   else{
     eAddSize = 5;
   }
   ellipse(x + random(50),y + random(10),eAddSize,eAddSize);
+}
+
+void f(float x, float y) {
+  stroke(random(25),random(120,254),random(255));
+  
+  float t = millis()/1000.0f * random(200);
+  int pointX = (int)(cx+r*sin(t));
+  int pointY = (int)(cy+r*sin(t));  
+  
+ line(pointX, pointY, x, y);
 }
 
 void m(float x, float y) {

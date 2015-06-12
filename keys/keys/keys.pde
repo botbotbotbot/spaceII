@@ -22,9 +22,9 @@ void draw() {
     if (mode=='e') {
       e(mouseX,mouseY);
     }
-//    if (mode=='f') {
-//      f(mouseX,mouseY);
-//    }
+    if (mode=='f') {
+      f(mouseX,mouseY);
+    }
 //    if (mode=='g') {
 //      g(mouseX,mouseY);
 //    }
@@ -104,9 +104,9 @@ void mousePressed() {
     if (mode=='e') {
       e(mouseX,mouseY);
     }
-//    if (mode=='f') {
-//      f(mouseX,mouseY);
-//    }
+    if (mode=='f') {
+      f(mouseX,mouseY);
+    }
 //    if (mode=='g') {
 //      g(mouseX,mouseY);
 //    }
@@ -187,9 +187,9 @@ void keyPressed() {
     if (key == 'e') {
       mode='e';
     }
-//    if (key == 'f') {
-//      mode='f';
-//    }
+    if (key == 'f') {
+      mode='f';
+    }
 //    if (key == 'g') {
 //      mode='g';
 //    }
