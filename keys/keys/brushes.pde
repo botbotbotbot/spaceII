@@ -19,8 +19,21 @@ void c(float x, float y) {
 }
 
 void d(float x, float y) {
-  fill(random(254),random(254),random(254));
+  fill(random(50),random(254),random(200));
   triangle(x, y, x - 50, y - random(10), x + random(100), y - 25);
+}
+
+float eAddSize = 30;
+void e(float x, float y){
+  noFill();
+  stroke(random(175,254),random(25),random(100,200));
+  if(eAddSize < 800){
+    eAddSize = eAddSize + 5;
+  }
+  else{
+    eAddSize = 5;
+  }
+  ellipse(x + random(50),y + random(10),eAddSize,eAddSize);
 }
 
 void m(float x, float y) {
