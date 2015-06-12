@@ -18,6 +18,11 @@ void c(float x, float y) {
   line(width,height,x,y);
 }
 
+void d(float x, float y) {
+  fill(random(254),random(254),random(254));
+  triangle(x, y, x - 50, y - random(10), x + random(100), y - 25);
+}
+
 void m(float x, float y) {
   fill(255);
   noStroke();
