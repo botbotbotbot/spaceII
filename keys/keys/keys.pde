@@ -25,15 +25,15 @@ void draw() {
     if (mode=='f') {
       f(mouseX,mouseY);
     }
-//    if (mode=='g') {
-//      g(mouseX,mouseY);
-//    }
-//    if (mode=='h') {
-//      h(mouseX,mouseY);
-//    }
-//    if (mode=='i') {
-//      i(mouseX,mouseY);
-//    }
+    if (mode=='g') {
+      g(mouseX,mouseY);
+    }
+    if (mode=='h') {
+      h(mouseX,mouseY);
+    }
+    if (mode=='i') {
+      i(mouseX,mouseY);
+    }
 //    if (mode=='j') {
 //      j(mouseX,mouseY);
 //    }
@@ -107,15 +107,15 @@ void mousePressed() {
     if (mode=='f') {
       f(mouseX,mouseY);
     }
-//    if (mode=='g') {
-//      g(mouseX,mouseY);
-//    }
-//    if (mode=='h') {
-//      h(mouseX,mouseY);
-//    }
-//    if (mode=='i') {
-//      i(mouseX,mouseY);
-//    }
+    if (mode=='g') {
+      g(mouseX,mouseY);
+    }
+    if (mode=='h') {
+      h(mouseX,mouseY);
+    }
+    if (mode=='i') {
+      i(mouseX,mouseY);
+    }
 //    if (mode=='j') {
 //      j(mouseX,mouseY);
 //    }
@@ -190,15 +190,15 @@ void keyPressed() {
     if (key == 'f') {
       mode='f';
     }
-//    if (key == 'g') {
-//      mode='g';
-//    }
-//    if (key == 'h') {
-//      mode='h';
-//    }
-//    if (key == 'i') {
-//      mode='i';
-//    }
+    if (key == 'g') {
+      mode='g';
+    }
+    if (key == 'h') {
+      mode='h';
+    }
+    if (key == 'i') {
+      mode='i';
+    }
 //    if (key == 'j') {
 //      mode='j';
 //    }

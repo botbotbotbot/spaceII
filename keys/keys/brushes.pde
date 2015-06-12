@@ -24,6 +24,7 @@ void c(float x, float y) {
 }
 
 void d(float x, float y) {
+  noStroke();
   fill(random(50),random(254),random(200));
   triangle(x, y, x - 50, y - random(10), x + random(100), y - 25);
 }
@@ -49,6 +50,31 @@ void f(float x, float y) {
   
  line(pointX, pointY, x, y);
 }
+
+void g(float x, float y) {
+  for (int i = 0; i < 25; i = i+1) {
+    fill(random(200,254),200,random(150,220), random(75));
+    stroke(random(100,255),50,random(150,240));
+    ellipse(x + random(-75, 75) ,y + random(-75, 75),3,3);
+  }
+}
+
+void h(float x, float y) {
+  for (int i = 0; i < 75; i = i+1) {
+    fill(random(5,100),random(150,235),random(10,255), random(50,70));
+    noStroke();
+    ellipse(x + random(5) ,y + random(-90,90),3,3);
+  }
+}
+
+
+void i(float x, float y) {
+  noStroke();
+  fill(random(150,255),random(50, 150),random(50), random(5, 12));
+  quad(x + random(5), y + random(2), x + random(5), y + random(30), x + random(50), y + random(50), x + random(100,200), y + random(100, 200));
+}
+
+
 
 void m(float x, float y) {
   fill(255);
