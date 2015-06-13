@@ -49,9 +49,9 @@ void draw() {
     if (mode=='n') {
       n(mouseX,mouseY);
     }
-//    if (mode=='o') {
-//      o(mouseX,mouseY);
-//    }
+    if (mode=='o') {
+      o(mouseX,mouseY);
+    }
 //    if (mode=='p') {
 //      p(mouseX,mouseY);
 //    }
@@ -131,9 +131,9 @@ void mousePressed() {
     if (mode=='n') {
       n(mouseX,mouseY);
     }
-//    if (mode=='o') {
-//      o(mouseX,mouseY);
-//    }
+    if (mode=='o') {
+      o(mouseX,mouseY);
+    }
 //    if (mode=='p') {
 //      p(mouseX,mouseY);
 //    }
@@ -214,9 +214,9 @@ void keyPressed() {
     if (key == 'n') {
       mode='n';
     }
-//    if (key == 'o') {
-//      mode='o';
-//    }
+    if (key == 'o') {
+      mode='o';
+    }
 //    if (key == 'p') {
 //      mode='p';
 //    }

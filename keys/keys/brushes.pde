@@ -113,11 +113,12 @@ void l(float x, float y) {
 }
 
 void m(float x, float y) {
-  fill(255);
+  float r = 100*sin(frameCount/180)+111;
+  float b = 100*cos(frameCount/100)+127;
+  float g = 100*sin(frameCount/130)+150;
+  fill(r,b,g);
   noStroke();
-  //bezier(0,0,x,y,random(width),random(height),width,height);
   bezier(0,0,x,y,x+20,y-100,width,height);
- // bezier(endx,endy,40.3,50.2,x,y,startx,starty);
 }
 
 void n(float x, float y) {
@@ -132,5 +133,14 @@ void n(float x, float y) {
   line(x,y,x+linesize*sin(r1),y+linesize*cos(r1));
   r2 = random(0,1) + r1;
   line(x+linesize*sin(r1),y+linesize*cos(r1),x+linesize*sin(r1)+linesize*sin(r2),y+linesize*cos(r1)+linesize*cos(r2));
+}
 
+void o(float x, float y) {
+  float r = 100*sin(frameCount/180)+111;
+  float b = 100*cos(frameCount/100)+127;
+  float g = 100*sin(frameCount/130)+150;
+  float offset = random(100,width/2-20);
+  fill(r,b,g);
+  strokeWeight(5);
+  rect(offset,offset,width-2*offset,height-2*offset);
 }
