@@ -94,11 +94,17 @@ void j(float x, float y) {
   }
 }
 
+void k(float x, float y) {
+  color hoverColor = get(int(x),int(y));
+  stroke(hoverColor);
+  fill(hoverColor);
+  rect(x,y,3,100);
+}
+
 void l(float x, float y) {
   float r1;
   float r2;
-  float linesize;
-  linesize = 20; 
+  float linesize = 20;
   stroke(255);
   r1 = random(0,2*PI);
   line(x,y,x+linesize*sin(r1),y+linesize*cos(r1));
