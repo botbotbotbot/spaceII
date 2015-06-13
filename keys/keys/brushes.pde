@@ -94,7 +94,17 @@ void j(float x, float y) {
   }
 }
 
-
+void l(float x, float y) {
+  float r1;
+  float r2;
+  float linesize;
+  linesize = 20; 
+  stroke(255);
+  r1 = random(0,2*PI);
+  line(x,y,x+linesize*sin(r1),y+linesize*cos(r1));
+  r2 = random(0,1) + r1;
+  line(x+linesize*sin(r1),y+linesize*cos(r1),x+linesize*sin(r1)+linesize*sin(r2),y+linesize*cos(r1)+linesize*cos(r2));
+}
 
 void m(float x, float y) {
   fill(255);
