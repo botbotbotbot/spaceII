@@ -119,3 +119,18 @@ void m(float x, float y) {
   bezier(0,0,x,y,x+20,y-100,width,height);
  // bezier(endx,endy,40.3,50.2,x,y,startx,starty);
 }
+
+void n(float x, float y) {
+  color hoverColor = get(int(x),int(y));
+  stroke(hoverColor);
+  fill(hoverColor);
+  float r1;
+  float r2;
+  float linesize = 100;
+  strokeWeight(10);
+  r1 = random(0,2*PI);
+  line(x,y,x+linesize*sin(r1),y+linesize*cos(r1));
+  r2 = random(0,1) + r1;
+  line(x+linesize*sin(r1),y+linesize*cos(r1),x+linesize*sin(r1)+linesize*sin(r2),y+linesize*cos(r1)+linesize*cos(r2));
+
+}
