@@ -29,10 +29,10 @@
   void draw() {
   	background(255);
   	fill(0);
-  	posX++;
-  	posY++;
+  	tempPosX = getXPos();
+  	tempPosY = getYPos();
   	for(var i = 0; i < 25; i++;){
-  		ellipse((posY * (Math.random() * 50)), (posX * (Math.random() * 50)), 25, 25);
+  		ellipse(tempPosX, tempPosY, 25, 25);
   	}
     /*if (tiltSupport) {
 	    tiltX = abs((tiltX < 180) ? tiltX : 360 - tiltX);
@@ -46,6 +46,31 @@
 	    text("Tilt not supported on this device.", width/2, height/2);
   	}*/
   }
+
+  void getXPos(){
+  	console.log('x ' + posX + ' vs ' + displayWidth);
+  	if(posX < displayWidth){
+   		posX++;
+  		thisXPos = posX + Math.random() * 100;
+  		return thisXPos;
+  	}
+  	else{
+  		return posX;
+  	}
+  }
+
+  void getYPos(){
+  	console.log('y ' + posY + ' vs ' + displayHeight);
+  	if(posY < displayHeight){
+  		posY++;
+  		thisYPos = posY + Math.random() * 100;
+  		return thisYPos;
+  	}
+  	else{
+  		return posY;
+  	}
+  }
+
   </script>
   <canvas id="sketch"></canvas>
   <script src="https://pzp1997.github.io/cdn/processing-mobile/1.1.0/processing-mobile.min.js"></script>
