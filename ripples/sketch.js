@@ -6,6 +6,8 @@
 function preload() {
 
 }
+
+
 var r;
 var g;
 var b;
@@ -100,13 +102,13 @@ function makeRipples(x, thisTime){
 	stroke(255, 255, 255, 80);
 	noFill();
 	strokeWeight(1);
-	/*while(thisTime + 4000 > millis()){
-		if(millis()%250 == 0){
-			ellipse(mouseX, mouseY, x * 3, x * 3);
-			stroke(255, 255, 255, 80 - x);
-			x += 20;
-		}
-	}*/
+	// while(thisTime + 250 > millis()){
+	// 	if(millis()%250 === 0){
+	// 		ellipse(mouseX, mouseY, x * 3, x * 3);
+	// 		stroke(255, 255, 255, 80 - x);
+	// 		x += 20;
+	// 	}
+	// }
 	for(i=0; i < 10; i++){
 		ellipse(mouseX, mouseY, x * 3, x * 3);
 		stroke(255, 255, 255, 80 - x);
