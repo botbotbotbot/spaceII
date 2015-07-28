@@ -1,5 +1,5 @@
 from rendertools import *
-
+print "running"
 def step(imgfield,n):
     imgfield_2_file(imgfield,'img/0')
     for i in range(1,n+1):
@@ -17,9 +17,9 @@ def mas(imgfield):
     I = imgvector_2_imgfield(newPixels,w,h)
     return I
 
-a = file_2_imgfield('alcohol_zoom.jpg')
+a = file_2_imgfield('madewithP.jpg')
 
-step(a,500)
-
+step(a,20)
+print "done"
 # Command line instruction to convert output images to video:
 #ffmpeg -framerate 10 -i %d.png -vcodec mpeg4 -y movie.mp4

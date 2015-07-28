@@ -144,3 +144,15 @@ void o(float x, float y) {
   strokeWeight(5);
   rect(offset,offset,width-2*offset,height-2*offset);
 }
+
+void p(float x, float y) {
+  float r = 100*sin(frameCount/180)+111;
+  float b = 100*cos(frameCount/100)+127;
+  float g = 100*sin(frameCount/130)+150;
+  float size = random(15,150);
+  fill(r,b,g);
+  strokeWeight(1);
+  for (int i = 0; i < width-1; i = i+1) {
+    ellipse(i,y+size*sin(i),5,5);
+  }
+}
