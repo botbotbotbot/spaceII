@@ -33,12 +33,14 @@ void setup() {
   player.volume(1.0);
   player.setAnalysing(true);
   background(0);
+  frameRate(2);
   //colorMode(HSB);
 }
 
 void draw() {
+  background(0);
   float power = 0;
-  float radius = 100;
+  float r = 100;
   stroke(255);
   if (playit) {
     player.play();
@@ -48,19 +50,28 @@ void draw() {
     high = subset(spec,60,30);
     translate(width/2,height/2);
     
-    float[] bezierPts;
+    rotate(random(0,2*PI));
+    beginShape();
     for (int i=0;i<spec.length;i++) {
       // Some trig to calculate original curve endpoints.
       // The idea is to draw a circle out of "arcs" made
       // of Bezier curves, these endpoints are eventually 
       // transformed by the sound spectrum.
-      float theta = 2*PI/spec.length;
-      float d = 2*asin(theta/2); // length of arc 
-      float y = d*sin((180-theta)/2); 
-      float x = sqrt(1-y*y);
-      line(radius,0,radius*x,radius*y);
+      float r_distorted = r+spec[i]*300;
+      float theta = 2*(i+1)*PI/spec.length;
+      float y = r_distorted*sin(theta); 
+      float x = sqrt(pow(r_distorted,2)-pow(y,2));
+      if (theta>PI/2 && theta<3*PI/2) {
+        x = -x; // +- sqrt adjustment
+      }
+      curveVertex(x,y);
     }
-    bezier(bezierPts);
+    float r_distorted = r+spec[0]*300;
+    float theta = 2*PI/spec.length;
+    float y = r_distorted*sin(theta); 
+    float x = sqrt(pow(r_distorted,2)-pow(y,2));
+    curveVertex(startx,starty);
+    endShape();
   }
 
 //    power = player.getAveragePower();
